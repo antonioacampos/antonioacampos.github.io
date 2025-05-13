@@ -1,110 +1,124 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Antonio Campos - Desenvolvedor Fullstack</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #f8f9fa;
-    }
-    header {
-      background-color: #0d6efd;
-      color: white;
-      padding: 50px 0;
-      text-align: center;
-    }
-    .card {
-      transition: transform 0.3s;
-    }
-    .card:hover {
-      transform: scale(1.05);
-    }
-    footer {
-      background-color: #0d6efd;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-      margin-top: 40px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antonio Campos | Developer</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="light-mode">
+  <div class="theme-toggle">
+    <button id="theme-toggle-btn" aria-label="Toggle theme">
+      <i class="fas fa-moon"></i>
+    </button>
+  </div>
 
-<header>
-  <h1>Olá, eu sou o Antonio Campos</h1>
-  <p>Desenvolvimento Web | Full Stack | Engenharia de Software | Infraestrutura</p>
-</header>
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">Developer</a>
+      <div class="nav-toggle" id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<main class="container my-5">
-  <section class="text-center mb-5">
-    <h2>Meus Projetos</h2>
-    <p>Conheça alguns dos trabalhos que desenvolvi</p>
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="profile-image">
+          <img src="https://avatars.githubusercontent.com/u/129632162?s=400&u=fc0385cd7488acf6e06d77569b0ee5bb03a507bd&v=4" alt="Profile Image">
+        </div>
+        <h1>Olá, eu sou o <span class="gradient-text">Antonio Campos</span></h1>
+        <p>Desenvolvedor Full Stack graduando em Engenharia de Software</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn primary">Ver projetos</a>
+          <a href="#contact" class="btn secondary">Contatos</a>
+        </div>
+      </div>
+      <div class="scroll-down">
+        <a href="#about">
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </div>
   </section>
 
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    
-    <div class="col">
-      <div class="card h-100">
-        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="workflow">
-        <div class="card-body">
-          <h5 class="card-title">USPDev Workflow</h5>
-          <p class="card-text">Biblioteca de Workflows que facilita o gerenciamento de fluxos de trabalho em aplicações.</p>
-        </div>
-        <div class="card-footer text-center">
-          <a href="https://github.com/uspdev/workflow" class="btn btn-primary" target="_blank">Ver Projeto</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card h-100">
-        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="conserto">
-        <div class="card-body">
-          <h5 class="card-title">Conserto</h5>
-          <p class="card-text">Aplicação de Spring Boot em um sistema de oficina mecânica</p>
-        </div>
-        <div class="card-footer text-center">
-          <a href="https://github.com/antonioacampos/conserto" class="btn btn-primary" target="_blank">Ver Projeto</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card h-100">
-        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="huffman">
-        <div class="card-body">
-          <h5 class="card-title">Huffman tree</h5>
-          <p class="card-text">Codificação e decodificação em árvore huffman</p>
-        </div>
-        <div class="card-footer text-center">
-          <a href="https://github.com/antonioacampos/huffmanTree" class="btn btn-primary" target="_blank">Ver Projeto</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="sudoku">
-          <div class="card-body">
-            <h5 class="card-title">Sudoku</h5>
-            <p class="card-text">API para um jogo de Sudoku</p>
-          </div>
-          <div class="card-footer text-center">
-            <a href="https://github.com/antonioacampos/sudoku" class="btn btn-primary" target="_blank">Ver Projeto</a>
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Sobre mim</h2>
+          <p>Sou apaixonado por tecnologia, com experiência em front-end, back-end, bancos de dados e segurança da informação.</p>
+          <p>Busco aprimorar constantemente minhas habilidades para atender às demandas do mercado. </p>
+          <p>Minha trajetória inclui iniciativas filantrópicas, fortalecendo meu trabalho em equipe e resiliência.</p>
+          <div class="tags">
+            <span>Problem Solver</span>
+            <span>Tech Enthusiast</span>
+            <span>Continuous Learner</span>
+            <span>Team Player</span>
           </div>
         </div>
+        <div class="about-image">
+          <img src="https://images.pexels.com/photos/4974915/pexels-photo-4974915.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="About Image">
+        </div>
       </div>
+    </div>
+  </section>
 
-  </div>
-</main>
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Meus <span class="gradient-text">Projetos</span></h2>
+      <p class="section-desc">Aqui estão alguns projetos nos quais eu trabalhei. Cada projeto demonstra habilidades diferentes e tecnologias que tenho exercitado.</p>
+      <div class="project-grid" id="project-grid">
+      </div>
+      <div class="project-buttons">
+        <button id="show-more-btn" class="btn primary">Mostrar mais</button>
+        <button id="show-less-btn" class="btn secondary">Mostrar menos</button>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <p>© 2025 Antonio Augusto de Campos - Todos os direitos reservados</p>
-</footer>
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>Habilidades <span class="gradient-text">Técnicas</span></h2>
+      <p class="section-desc">Essas são as tecnologias e ferramentas que utilizo para desenvolver aplicações modernas, escaláveis e de fácil manutenção.</p>
+      <div class="skills-grid" id="skills-grid">
+      </div>
+    </div>
+  </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contatos</h2>
+      <div class="social-links" id="social-links">
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Antonio Augusto de Campos. Todos os direitos reservados.</p>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
 </body>
 </html>
