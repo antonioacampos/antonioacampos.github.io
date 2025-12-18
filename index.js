@@ -220,19 +220,6 @@ function renderSocialLinks() {
   });
 }
 
-const contactForm = document.getElementById('contact-form');
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const subject = document.getElementById('subject').value;
-  const message = document.getElementById('message').value;
-  
-  console.log('Form submission:', { name, email, subject, message });
-  alert('Mensagem enviada com sucesso! (Demo)');
-  contactForm.reset();
-});
-
 document.getElementById('current-year').textContent = new Date().getFullYear();
 
 document.addEventListener('DOMContentLoaded', () => {
