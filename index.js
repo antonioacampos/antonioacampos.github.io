@@ -1,6 +1,5 @@
 const themeToggleBtn = document.getElementById('theme-toggle-btn');
 const themeIcon = themeToggleBtn.querySelector('i');
-
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 const savedTheme = localStorage.getItem('theme');
 
@@ -20,7 +19,6 @@ function toggleTheme() {
     localStorage.setItem('theme', 'light');
   }
 }
-
 themeToggleBtn.addEventListener('click', toggleTheme);
 
 const navToggle = document.getElementById('nav-toggle');
@@ -40,7 +38,6 @@ navLinks.forEach(link => {
 });
 
 const navbar = document.querySelector('.navbar');
-
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
     navbar.classList.add('scrolled');
@@ -50,15 +47,12 @@ window.addEventListener('scroll', () => {
 });
 
 const sections = document.querySelectorAll('section[id]');
-
 function highlightNavLink() {
   const scrollY = window.pageYOffset;
-  
   sections.forEach(section => {
     const sectionHeight = section.offsetHeight;
     const sectionTop = section.offsetTop - 100;
     const sectionId = section.getAttribute('id');
-    
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       document.querySelector(`.nav-link[href*="${sectionId}"]`).classList.add('active');
     } else {
@@ -66,86 +60,82 @@ function highlightNavLink() {
     }
   });
 }
-
 window.addEventListener('scroll', highlightNavLink);
 
 const projects = [
   {
-    id: '1',
-    title: 'E-Commerce Platform',
-    description: 'A full-featured e-commerce platform built with React, Node.js, and MongoDB. Includes user authentication, product management, and payment processing.',
-    tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    imageUrl: 'https://images.pexels.com/photos/5076516/pexels-photo-5076516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    demoUrl: 'https://github.com',
-    githubUrl: 'https://github.com'
+    id: 'letterbesd',
+    title: 'LetterBESd',
+    description: 'Sistema ML recomendação filmes: Flask + React + PostgreSQL Docker',
+    tags: ['Python/Flask', 'React', 'Docker', 'ML Ratings'],
+    imageUrl: 'https://images.pexels.com/photos/163036/movie-reel-film-reel-film-strip-163036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    githubUrl: 'https://github.com/antonioacampos/letterbesd'
   },
   {
-    id: '2',
-    title: 'Portfolio Website',
-    description: 'A responsive portfolio website built with React and Tailwind CSS. Features a modern design, project showcase, and contact form.',
-    tags: ['React', 'Tailwind CSS', 'Vite'],
-    imageUrl: 'https://images.pexels.com/photos/5926389/pexels-photo-5926389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    demoUrl: 'https://github.com',
-    githubUrl: 'https://github.com'
+    id: 'usp-ci',
+    title: 'USPdev/ci',
+    description: 'Comunicação Interna USP: documentos, templates PDF, Senha Única',
+    tags: ['PHP 8.2', 'Laravel 11', 'Replicado USP', 'MPM-ITK'],
+    imageUrl: 'https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    githubUrl: 'https://github.com/uspdev/ci'
   },
   {
-    id: '3',
-    title: 'Weather App',
-    description: 'A weather application that provides real-time weather information based on user location or search. Uses the OpenWeatherMap API.',
-    tags: ['JavaScript', 'API', 'CSS'],
-    imageUrl: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    demoUrl: 'https://github.com',
-    githubUrl: 'https://github.com'
+    id: 'usp-workflows',
+    title: 'USPdev/workflows',
+    description: 'BPMN Engine: Symfony Workflow + Laravel 11 + forms dinâmicos',
+    tags: ['Laravel Package', 'Symfony Workflow', 'BPMN', 'Activitylog'],
+    imageUrl: 'https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    githubUrl: 'https://github.com/uspdev/workflows'
   },
   {
-    id: '4',
-    title: 'Task Management System',
-    description: 'A task management application with features like task creation, assignment, status updates, and deadline notifications.',
-    tags: ['React', 'Firebase', 'Tailwind CSS'],
-    imageUrl: 'https://images.pexels.com/photos/6956353/pexels-photo-6956353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    demoUrl: 'https://github.com',
-    githubUrl: 'https://github.com'
+    id: 'usp-equivalencia',
+    title: 'USPdev/equivalencia',
+    description: 'Equivalência acadêmica USP: workflows + forms',
+    tags: ['Senha Única', 'PostgreSQL', 'Workflows', 'Forms'],
+    imageUrl: 'https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    githubUrl: 'https://github.com/uspdev/equivalencia'
   },
   {
-    id: '5',
-    title: 'Chat Application',
-    description: 'A real-time chat application with features like private messaging, group chats, and file sharing.',
-    tags: ['React', 'Socket.io', 'Express', 'MongoDB'],
-    imageUrl: 'https://images.pexels.com/photos/7988113/pexels-photo-7988113.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    demoUrl: 'https://github.com',
-    githubUrl: 'https://github.com'
+    id: 'usp-forms',
+    title: 'USPdev/forms',
+    description: 'Form Builder JSON→HTML: pessoa-usp, disciplina-usp, file upload',
+    tags: ['Laravel Package', 'Replicado USP', 'CRUD Admin', 'Bootstrap 5'],
+    imageUrl: 'https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    githubUrl: 'https://github.com/uspdev/forms'
   },
   {
-    id: '6',
-    title: 'Blog Platform',
-    description: 'A blog platform with features like post creation, commenting, user profiles, and content management.',
-    tags: ['Next.js', 'Prisma', 'PostgreSQL', 'Tailwind CSS'],
-    imageUrl: 'https://images.pexels.com/photos/261579/pexels-photo-261579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    demoUrl: 'https://github.com',
-    githubUrl: 'https://github.com'
+    id: 'caronaapi',
+    title: 'CaronaAPI',
+    description: 'API caronas universitárias',
+    tags: ['Laravel 11', 'Sanctum', 'Redis', 'Railway'],
+    imageUrl: 'https://images.pexels.com/photos/2988459/pexels-photo-2988459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    githubUrl: 'https://github.com/antonioacampos/caronaAPI'
   }
 ];
 
 const skills = [
-  { name: 'JavaScript', icon: 'fa-brands fa-js' },
-  { name: 'TypeScript', icon: 'fa-solid fa-code' },
+  { name: 'PHP 8.3', icon: 'fa-brands fa-php' },
+  { name: 'Laravel 11', icon: 'fa-solid fa-leaf' },
   { name: 'React', icon: 'fa-brands fa-react' },
-  { name: 'Node.js', icon: 'fa-brands fa-node-js' },
-  { name: 'HTML/CSS', icon: 'fa-brands fa-html5' },
-  { name: 'Git', icon: 'fa-brands fa-git-alt' },
-  { name: 'MongoDB', icon: 'fa-solid fa-database' },
-  { name: 'SQL', icon: 'fa-solid fa-table' },
+  { name: 'TypeScript', icon: 'fa-solid fa-code' },
+  { name: 'Java', icon: 'fa-brands fa-java' },
+  { name: 'Spring Boot', icon: 'fa-solid fa-bootstrap' },
+  { name: 'Python', icon: 'fa-brands fa-python' },
   { name: 'Docker', icon: 'fa-brands fa-docker' },
-  { name: 'AWS', icon: 'fa-brands fa-aws' },
-  { name: 'Redux', icon: 'fa-solid fa-repeat' },
-  { name: 'GraphQL', icon: 'fa-solid fa-diagram-project' }
+  { name: 'PostgreSQL', icon: 'fa-solid fa-database' },
+  { name: 'Redis', icon: 'fa-solid fa-fire' },
+  { name: 'GitHub Actions', icon: 'fa-brands fa-github' },
+  { name: 'Railway', icon: 'fa-solid fa-rocket' },
+  { name: 'Apache', icon: 'fa-solid fa-server' },
+  { name: 'Nginx', icon: 'fa-solid fa-globe' },
+  { name: 'MPM-ITK', icon: 'fa-solid fa-shield-alt' }
 ];
 
 const socialLinks = [
-  { name: 'GitHub', url: 'https://github.com', icon: 'fa-brands fa-github' },
-  { name: 'LinkedIn', url: 'https://linkedin.com', icon: 'fa-brands fa-linkedin' },
-  { name: 'Twitter', url: 'https://twitter.com', icon: 'fa-brands fa-twitter' },
-  { name: 'Email', url: 'mailto:hello@example.com', icon: 'fa-solid fa-envelope' }
+  { name: 'GitHub', url: 'https://github.com/antonioacampos', icon: 'fa-brands fa-github' },
+  { name: 'LinkedIn', url: 'https://linkedin.com/in/antonioacampos', icon: 'fa-brands fa-linkedin' },
+  { name: 'Email', url: 'mailto:antoniocampos_a@outlook.com', icon: 'fa-solid fa-envelope' },
+  { name: 'IFSP SCL', url: 'https://portais.ifsp.edu.br/scl/index.php/cursos.html?id=1762:bacharelado-em-engenharia-de-software&catid=61', icon: 'fa-solid fa-graduation-cap' }
 ];
 
 const projectGrid = document.getElementById('project-grid');
@@ -160,26 +150,27 @@ function renderProjects(count = projects.length) {
   visibleProjects.forEach(project => {
     const projectCard = document.createElement('div');
     projectCard.className = 'project-card';
-    
     projectCard.innerHTML = `
       <div class="project-image">
-        <img src="${project.imageUrl}" alt="${project.title}">
+        <img src="${project.imageUrl}" alt="${project.title}" loading="lazy">
         <div class="project-overlay">
           <div class="project-links">
-            ${project.demoUrl ? `<a href="${project.demoUrl}" target="_blank" aria-label="View demo"><i class="fas fa-external-link-alt"></i></a>` : ''}
-            ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" aria-label="View source code"><i class="fab fa-github"></i></a>` : ''}
+            <a href="${project.githubUrl}" target="_blank" aria-label="GitHub ${project.title}">
+              <i class="fab fa-github"></i>
+            </a>
           </div>
         </div>
       </div>
       <div class="project-info">
-        <h3 class="project-title">${project.title}</h3>
+        <h3 class="project-title">
+          <a href="${project.githubUrl}" target="_blank">${project.title}</a>
+        </h3>
         <p class="project-description">${project.description}</p>
         <div class="project-tags">
           ${project.tags.map(tag => `<span>${tag}</span>`).join('')}
         </div>
       </div>
     `;
-    
     projectGrid.appendChild(projectCard);
   });
   
@@ -199,71 +190,47 @@ showMoreBtn.addEventListener('click', () => renderProjects());
 showLessBtn.addEventListener('click', () => renderProjects(initialProjectCount));
 
 const skillsGrid = document.getElementById('skills-grid');
-
 function renderSkills() {
   skillsGrid.innerHTML = '';
-  
   skills.forEach(skill => {
     const skillCard = document.createElement('div');
     skillCard.className = 'skill-card';
-    
     skillCard.innerHTML = `
       <div class="skill-icon">
         <i class="${skill.icon}"></i>
       </div>
       <div class="skill-name">${skill.name}</div>
     `;
-    
     skillsGrid.appendChild(skillCard);
   });
 }
 
 const socialLinksContainer = document.getElementById('social-links');
-const footerSocial = document.getElementById('footer-social');
-
 function renderSocialLinks() {
   socialLinksContainer.innerHTML = '';
-  footerSocial.innerHTML = '';
-  
   socialLinks.forEach(link => {
     const socialLink = document.createElement('a');
     socialLink.className = 'social-link';
     socialLink.href = link.url;
     socialLink.target = '_blank';
     socialLink.rel = 'noopener noreferrer';
-    
     socialLink.innerHTML = `
-      <i class="${link.icon}"></i>
-      <span>${link.name}</span>
+      <i class="${link.icon}"></i> ${link.name}
     `;
-    
     socialLinksContainer.appendChild(socialLink);
-    
-    const footerLink = document.createElement('a');
-    footerLink.href = link.url;
-    footerLink.target = '_blank';
-    footerLink.rel = 'noopener noreferrer';
-    footerLink.setAttribute('aria-label', link.name);
-    
-    footerLink.innerHTML = `<i class="${link.icon}"></i>`;
-    
-    footerSocial.appendChild(footerLink);
   });
 }
 
 const contactForm = document.getElementById('contact-form');
-
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const subject = document.getElementById('subject').value;
   const message = document.getElementById('message').value;
   
   console.log('Form submission:', { name, email, subject, message });
-  
-  alert('Message sent successfully!');
+  alert('Mensagem enviada com sucesso! (Demo)');
   contactForm.reset();
 });
 
@@ -277,16 +244,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function revealOnScroll() {
-  const elements = document.querySelectorAll('.project-card, .skill-card, .about-image, .about-text');
-  
+  const elements = document.querySelectorAll('.project-card, .skill-card, .about-image, .about-text, .experience-item');
   elements.forEach(element => {
     const elementTop = element.getBoundingClientRect().top;
     const elementVisible = 150;
-    
     if (elementTop < window.innerHeight - elementVisible) {
       element.classList.add('active');
     }
   });
 }
-
 window.addEventListener('scroll', revealOnScroll);
