@@ -67,7 +67,7 @@ const projects = [
     title: 'LetterBESd',
     description: 'Sistema ML recomendação filmes: Flask + React + PostgreSQL Docker',
     tags: ['Python/Flask', 'React', 'Docker', 'ML Ratings'],
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Letterboxd_Logo.svg/512px-Letterboxd_Logo.svg.png',
+    icon: 'fa-solid fa-film',
     githubUrl: 'https://github.com/antonioacampos/letterbesd'
   },
   {
@@ -75,7 +75,7 @@ const projects = [
     title: 'USPdev/ci',
     description: 'Comunicação Interna USP: documentos, templates PDF, Senha Única',
     tags: ['PHP 8.2', 'Laravel 11', 'Replicado USP', 'MPM-ITK'],
-    imageUrl: 'https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    icon: 'fa-solid fa-file-contract',
     githubUrl: 'https://github.com/uspdev/ci'
   },
   {
@@ -83,7 +83,7 @@ const projects = [
     title: 'USPdev/workflows',
     description: 'BPMN Engine: Symfony Workflow + Laravel 11 + forms dinâmicos',
     tags: ['Laravel Package', 'Symfony Workflow', 'BPMN', 'Activitylog'],
-    imageUrl: 'https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    icon: 'fa-solid fa-stream',
     githubUrl: 'https://github.com/uspdev/workflows'
   },
   {
@@ -91,7 +91,7 @@ const projects = [
     title: 'USPdev/equivalencia',
     description: 'Equivalência acadêmica USP: workflows + forms',
     tags: ['Senha Única', 'PostgreSQL', 'Workflows', 'Forms'],
-    imageUrl: 'https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    icon: 'fa-solid fa-graduation-cap',
     githubUrl: 'https://github.com/uspdev/equivalencia'
   },
   {
@@ -99,7 +99,7 @@ const projects = [
     title: 'USPdev/forms',
     description: 'Form Builder JSON→HTML: pessoa-usp, disciplina-usp, file upload',
     tags: ['Laravel Package', 'Replicado USP', 'CRUD Admin', 'Bootstrap 5'],
-    imageUrl: 'https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    icon: 'fa-solid fa-table-list',
     githubUrl: 'https://github.com/uspdev/forms'
   },
   {
@@ -107,7 +107,7 @@ const projects = [
     title: 'CaronaAPI',
     description: 'API caronas universitárias: matching RT + geolocalização + Railway',
     tags: ['Laravel 11', 'Sanctum', 'Redis', 'Railway'],
-    imageUrl: 'https://images.pexels.com/photos/2988459/pexels-photo-2988459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    icon: 'fa-solid fa-car',
     githubUrl: 'https://github.com/antonioacampos/caronaAPI'
   }
 ];
@@ -134,7 +134,7 @@ const socialLinks = [
   { name: 'GitHub', url: 'https://github.com/antonioacampos', icon: 'fa-brands fa-github' },
   { name: 'LinkedIn', url: 'https://linkedin.com/in/antonioacampos', icon: 'fa-brands fa-linkedin' },
   { name: 'Email', url: 'mailto:antoniocampos_a@outlook.com', icon: 'fa-solid fa-envelope' },
-  { name: 'IFSP SCL', url: 'https://portais.ifsp.edu.br/scl/index.php/cursos.html?id=1762:bacharelado-em-engenharia-de-software&catid=61', icon: 'fa-solid fa-graduation-cap' }
+  { name: 'IFSP SCL', url: 'https://portais.ifsp.edu.br/scl', icon: 'fa-solid fa-graduation-cap' }
 ];
 
 const projectGrid = document.getElementById('project-grid');
@@ -150,15 +150,8 @@ function renderProjects(count = projects.length) {
     const projectCard = document.createElement('div');
     projectCard.className = 'project-card';
     projectCard.innerHTML = `
-      <div class="project-image">
-        <img src="${project.imageUrl}" alt="${project.title}" loading="lazy">
-        <div class="project-overlay">
-          <div class="project-links">
-            <a href="${project.githubUrl}" target="_blank" aria-label="GitHub ${project.title}" rel="noopener noreferrer">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-        </div>
+      <div class="project-icon">
+        <i class="${project.icon}"></i>
       </div>
       <div class="project-info">
         <h3 class="project-title">
@@ -168,6 +161,9 @@ function renderProjects(count = projects.length) {
         <div class="project-tags">
           ${project.tags.map(tag => `<span>${tag}</span>`).join('')}
         </div>
+        <a href="${project.githubUrl}" target="_blank" class="project-link" rel="noopener noreferrer">
+          <i class="fab fa-github"></i> Ver no GitHub
+        </a>
       </div>
     `;
     projectGrid.appendChild(projectCard);
@@ -230,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function revealOnScroll() {
-  const elements = document.querySelectorAll('.project-card, .skill-card, .about-image, .about-text, .experience-item');
+  const elements = document.querySelectorAll('.project-card, .skill-card, .about-text, .experience-item');
   elements.forEach(element => {
     const elementTop = element.getBoundingClientRect().top;
     const elementVisible = 150;
