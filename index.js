@@ -67,7 +67,7 @@ const projects = [
     title: 'LetterBESd',
     description: 'Sistema ML recomendação filmes: Flask + React + PostgreSQL Docker',
     tags: ['Python/Flask', 'React', 'Docker', 'ML Ratings'],
-    imageUrl: 'https://images.unsplash.com/photo-1489599150841-a13d382f437b?w=800&h=600&fit=crop',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Letterboxd_Logo.svg/512px-Letterboxd_Logo.svg.png',
     githubUrl: 'https://github.com/antonioacampos/letterbesd'
   },
   {
