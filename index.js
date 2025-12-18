@@ -67,7 +67,6 @@ const projects = [
     title: 'LetterBESd',
     description: 'Sistema ML recomendação filmes: Flask + React + PostgreSQL Docker',
     tags: ['Python/Flask', 'React', 'Docker', 'ML Ratings'],
-    icon: 'fa-solid fa-film',
     githubUrl: 'https://github.com/antonioacampos/letterbesd'
   },
   {
@@ -75,7 +74,6 @@ const projects = [
     title: 'USPdev/ci',
     description: 'Comunicação Interna USP: documentos, templates PDF, Senha Única',
     tags: ['PHP 8.2', 'Laravel 11', 'Replicado USP', 'MPM-ITK'],
-    icon: 'fa-solid fa-file-contract',
     githubUrl: 'https://github.com/uspdev/ci'
   },
   {
@@ -83,7 +81,6 @@ const projects = [
     title: 'USPdev/workflows',
     description: 'BPMN Engine: Symfony Workflow + Laravel 11 + forms dinâmicos',
     tags: ['Laravel Package', 'Symfony Workflow', 'BPMN', 'Activitylog'],
-    icon: 'fa-solid fa-stream',
     githubUrl: 'https://github.com/uspdev/workflows'
   },
   {
@@ -91,7 +88,6 @@ const projects = [
     title: 'USPdev/equivalencia',
     description: 'Equivalência acadêmica USP: workflows + forms',
     tags: ['Senha Única', 'PostgreSQL', 'Workflows', 'Forms'],
-    icon: 'fa-solid fa-graduation-cap',
     githubUrl: 'https://github.com/uspdev/equivalencia'
   },
   {
@@ -99,7 +95,6 @@ const projects = [
     title: 'USPdev/forms',
     description: 'Form Builder JSON→HTML: pessoa-usp, disciplina-usp, file upload',
     tags: ['Laravel Package', 'Replicado USP', 'CRUD Admin', 'Bootstrap 5'],
-    icon: 'fa-solid fa-table-list',
     githubUrl: 'https://github.com/uspdev/forms'
   },
   {
@@ -107,7 +102,6 @@ const projects = [
     title: 'CaronaAPI',
     description: 'API caronas universitárias: matching RT + geolocalização + Railway',
     tags: ['Laravel 11', 'Sanctum', 'Redis', 'Railway'],
-    icon: 'fa-solid fa-car',
     githubUrl: 'https://github.com/antonioacampos/caronaAPI'
   }
 ];
@@ -134,7 +128,7 @@ const socialLinks = [
   { name: 'GitHub', url: 'https://github.com/antonioacampos', icon: 'fa-brands fa-github' },
   { name: 'LinkedIn', url: 'https://linkedin.com/in/antonioacampos', icon: 'fa-brands fa-linkedin' },
   { name: 'Email', url: 'mailto:antoniocampos_a@outlook.com', icon: 'fa-solid fa-envelope' },
-  { name: 'IFSP SCL', url: 'https://portais.ifsp.edu.br/scl', icon: 'fa-solid fa-graduation-cap' }
+  { name: 'IFSP SCL', url: 'https://portais.ifsp.edu.br/scl/index.php/cursos.html?id=1762:bacharelado-em-engenharia-de-software&catid=61', icon: 'fa-solid fa-graduation-cap' }
 ];
 
 const projectGrid = document.getElementById('project-grid');
@@ -150,9 +144,6 @@ function renderProjects(count = projects.length) {
     const projectCard = document.createElement('div');
     projectCard.className = 'project-card';
     projectCard.innerHTML = `
-      <div class="project-icon">
-        <i class="${project.icon}"></i>
-      </div>
       <div class="project-info">
         <h3 class="project-title">
           <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer">${project.title}</a>
