@@ -112,7 +112,7 @@ const skills = [
   { name: 'React', icon: 'fa-brands fa-react' },
   { name: 'TypeScript', icon: 'fa-solid fa-code' },
   { name: 'Java', icon: 'fa-brands fa-java' },
-  { name: 'Spring Boot', icon: 'fa-solid fa-bootstrap' },
+  { name: 'Spring Boot', icon: 'fa-brands fa-java' },
   { name: 'Python', icon: 'fa-brands fa-python' },
   { name: 'Docker', icon: 'fa-brands fa-docker' },
   { name: 'PostgreSQL', icon: 'fa-solid fa-database' },
@@ -121,7 +121,6 @@ const skills = [
   { name: 'Railway', icon: 'fa-solid fa-rocket' },
   { name: 'Apache', icon: 'fa-solid fa-server' },
   { name: 'Nginx', icon: 'fa-solid fa-globe' },
-  { name: 'MPM-ITK', icon: 'fa-solid fa-shield-alt' }
 ];
 
 const socialLinks = [
