@@ -79,8 +79,8 @@ const projects = [
   {
     id: 'usp-workflows',
     title: 'USPdev/workflows',
-    description: 'BPMN Engine: Symfony Workflow + Laravel 11 + forms dinâmicos',
-    tags: ['Laravel Package', 'Symfony Workflow', 'BPMN', 'Activitylog'],
+    description: 'Symfony Workflow + Laravel 11 + forms dinâmicos',
+    tags: ['Laravel Package', 'Symfony Workflow', 'Activitylog'],
     githubUrl: 'https://github.com/uspdev/workflows'
   },
   {
@@ -93,14 +93,14 @@ const projects = [
   {
     id: 'usp-forms',
     title: 'USPdev/forms',
-    description: 'Form Builder JSON→HTML: pessoa-usp, disciplina-usp, file upload',
+    description: 'Form Builder JSON-HTML: campos pessoa-usp, disciplina-usp, file upload',
     tags: ['Laravel Package', 'Replicado USP', 'CRUD Admin', 'Bootstrap 5'],
     githubUrl: 'https://github.com/uspdev/forms'
   },
   {
     id: 'caronaapi',
     title: 'CaronaAPI',
-    description: 'API caronas universitárias: matching RT + geolocalização + Railway',
+    description: 'API caronas universitárias',
     tags: ['Laravel 11', 'Sanctum', 'Redis', 'Railway'],
     githubUrl: 'https://github.com/antonioacampos/caronaAPI'
   }
