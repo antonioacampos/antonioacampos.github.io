@@ -60,7 +60,6 @@ function highlightNavLink() {
     }
   });
 }
-window.addEventListener('scroll', highlightNavLink);
 
 const projects = [
   {
@@ -90,7 +89,7 @@ const projects = [
   {
     id: 'usp-equivalencia',
     title: 'USPdev/equivalencia',
-    description: 'Equivalência acadêmica USP: workflows + forms',
+    description: 'Equivalência acadêmica USP: workflows + forms (10k+ req/semestre)',
     tags: ['Senha Única', 'PostgreSQL', 'Workflows', 'Forms'],
     imageUrl: 'https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     githubUrl: 'https://github.com/uspdev/equivalencia'
@@ -106,7 +105,7 @@ const projects = [
   {
     id: 'caronaapi',
     title: 'CaronaAPI',
-    description: 'API caronas universitárias',
+    description: 'API caronas universitárias: matching RT + geolocalização + Railway',
     tags: ['Laravel 11', 'Sanctum', 'Redis', 'Railway'],
     imageUrl: 'https://images.pexels.com/photos/2988459/pexels-photo-2988459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     githubUrl: 'https://github.com/antonioacampos/caronaAPI'
@@ -155,7 +154,7 @@ function renderProjects(count = projects.length) {
         <img src="${project.imageUrl}" alt="${project.title}" loading="lazy">
         <div class="project-overlay">
           <div class="project-links">
-            <a href="${project.githubUrl}" target="_blank" aria-label="GitHub ${project.title}">
+            <a href="${project.githubUrl}" target="_blank" aria-label="GitHub ${project.title}" rel="noopener noreferrer">
               <i class="fab fa-github"></i>
             </a>
           </div>
@@ -163,7 +162,7 @@ function renderProjects(count = projects.length) {
       </div>
       <div class="project-info">
         <h3 class="project-title">
-          <a href="${project.githubUrl}" target="_blank">${project.title}</a>
+          <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer">${project.title}</a>
         </h3>
         <p class="project-description">${project.description}</p>
         <div class="project-tags">
@@ -254,3 +253,4 @@ function revealOnScroll() {
   });
 }
 window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('scroll', highlightNavLink);
