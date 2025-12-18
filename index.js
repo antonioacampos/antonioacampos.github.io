@@ -67,7 +67,7 @@ const projects = [
     title: 'LetterBESd',
     description: 'Sistema ML recomendação filmes: Flask + React + PostgreSQL Docker',
     tags: ['Python/Flask', 'React', 'Docker', 'ML Ratings'],
-    imageUrl: 'https://images.pexels.com/photos/163036/movie-reel-film-reel-film-strip-163036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    imageUrl: 'https://images.unsplash.com/photo-1489599150841-a13d382f437b?w=800&h=600&fit=crop',
     githubUrl: 'https://github.com/antonioacampos/letterbesd'
   },
   {
@@ -89,7 +89,7 @@ const projects = [
   {
     id: 'usp-equivalencia',
     title: 'USPdev/equivalencia',
-    description: 'Equivalência acadêmica USP: workflows + forms (10k+ req/semestre)',
+    description: 'Equivalência acadêmica USP: workflows + forms',
     tags: ['Senha Única', 'PostgreSQL', 'Workflows', 'Forms'],
     imageUrl: 'https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     githubUrl: 'https://github.com/uspdev/equivalencia'
