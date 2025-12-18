@@ -77,17 +77,17 @@ const projects = [
     githubUrl: 'https://github.com/uspdev/ci'
   },
   {
-    id: 'usp-workflows',
-    title: 'USPdev/workflows',
+    id: 'usp-workflow',
+    title: 'USPdev/workflow',
     description: 'Symfony Workflow + Laravel 11 + forms dinâmicos',
     tags: ['Laravel Package', 'Symfony Workflow', 'Activitylog'],
-    githubUrl: 'https://github.com/uspdev/workflows'
+    githubUrl: 'https://github.com/uspdev/workflow'
   },
   {
     id: 'usp-equivalencia',
     title: 'USPdev/equivalencia',
-    description: 'Equivalência acadêmica USP: workflows + forms',
-    tags: ['Senha Única', 'PostgreSQL', 'Workflows', 'Forms'],
+    description: 'Equivalência acadêmica USP: workflow + forms',
+    tags: ['Senha Única', 'PostgreSQL', 'workflow', 'Forms'],
     githubUrl: 'https://github.com/uspdev/equivalencia'
   },
   {
