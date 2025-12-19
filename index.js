@@ -101,7 +101,7 @@ const projects = [
     id: 'caronaapi',
     title: 'CaronaAPI',
     description: 'API caronas universitárias',
-    tags: ['Laravel 11', 'Sanctum', 'Redis', 'Railway'],
+    tags: ['Spring Boot', 'Testes automatizados'],
     githubUrl: 'https://github.com/antonioacampos/caronaAPI'
   }
 ];
